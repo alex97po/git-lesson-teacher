@@ -5,5 +5,6 @@ public class Main {
         String a  = "Vadim";
         System.out.println(a);
         System.out.println(6);
+        System.out.println(1);
     }
 }
