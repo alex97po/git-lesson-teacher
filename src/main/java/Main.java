@@ -1,10 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        BMI bmi = new BMI();
-        double height = bmi.inputHeight();
-        int weight = bmi.inputWeight();
-        double index = bmi.calculate(height, weight);
-        bmi.outputResult(index);
+        Game game = new Game();
+        String player1 = game.inputPlayer1();
+        String player2 = game.inputPlayer2();
+        game.calculateWinner(player1, player2);
     }
 
 
