@@ -1,4 +1,5 @@
 public class Main {
+    //To launch game
     public static void main(String[] args) {
         Game game = new Game();
         String player1 = game.inputPlayer1();
@@ -6,5 +7,5 @@ public class Main {
         game.calculateWinner(player1, player2);
     }
 
-
+    //To launch BMI
 }
