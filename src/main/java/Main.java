@@ -1,7 +1,11 @@
 public class Main {
+    //To launch game
     public static void main(String[] args) {
-    System.out.println("Viktor5");
-    System.out.println(35);
-    System.out.println("Maxim"+"\n"+"4");
+        Game game = new Game();
+        String player1 = game.inputPlayer1();
+        String player2 = game.inputPlayer2();
+        game.calculateWinner(player1, player2);
     }
+
+    //To launch BMI
 }
