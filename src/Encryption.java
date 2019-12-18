@@ -1,4 +1,4 @@
-public class Encryption {
+public class Encryption implements Test.Algorithm {
     public Test.Algorithm algorithm;
 
     public Encryption(Test.Algorithm algorithm) {

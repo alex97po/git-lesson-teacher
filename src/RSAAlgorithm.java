@@ -3,7 +3,9 @@ public class RSAAlgorithm implements Test.Algorithm {
     public String crypt(String text, String key) {
         String cryptedString = null;
 
-        // тело алгоритма
+        // код алгоритма
+
+        System.out.println("\n RSA  Algorithm");
 
         return cryptedString;
     }
