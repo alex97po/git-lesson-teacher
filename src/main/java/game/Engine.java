@@ -3,8 +3,12 @@ package game;
 import java.util.Scanner;
 
 public class Engine {
-    int stones = 12;
+    public static int stones;
     int level;
+
+    Engine(int stones) {
+        this.stones = stones;
+    }
 
     public void launchGame () {
         makePlayerToChooseLevel();
@@ -28,6 +32,18 @@ public class Engine {
         Player player = new Player();
         ComputerFactory factory = new ComputerFactory();
         Computer computer = factory.createComputer(level);
-        computer.computerMove();
+        boolean isComputerWin = false;
+        while (stones > 0) {
+            System.out.println(Message.COMPUTER_MOVE);
+            stones = computer.computerMove(stones);
+            if (stones <= 0) {
+                isComputerWin = true;
+                break;
+            }
+            System.out.println(Message.STONES_LEFT + stones);
+            stones -= player.playerMove();
+        }
+
+        System.out.println(isComputerWin ? Message.COMPUTER_WIN : Message.PLAYER_WIN);
     }
 }
