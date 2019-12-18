@@ -5,12 +5,12 @@ public class BMI {
     public double inputHeight(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Type your height: ");
-        if (scanner.hasNextDouble()) {
-           double height = scanner.nextDouble();
-           return height;
-        } else {
-            return 0;
+        while(!scanner.hasNextDouble()) {
+            System.out.println("Invalid value. Type your height: ");
+            scanner.next();
         }
+        double height = scanner.nextDouble();
+        return height;
     }
 
     public int inputWeight(){
