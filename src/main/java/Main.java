@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class Main {
     //To launch game
 //    public static void main(String[] args) {
@@ -17,6 +20,8 @@ public class Main {
 //        double bmi = index.calculate(height, weight);
 //        index.outputResult(bmi);
 
+
+
     }
 
     public static void recur (int a) {
@@ -25,5 +30,11 @@ public class Main {
             recur(++a);
             System.out.println(a);
         }
+    }
+
+    static String conferencePicker(String[] citiesVisited, String[] citiesOffered) {
+        return Arrays.stream(citiesOffered)
+                .filter(city -> !Arrays.stream(citiesVisited).collect(Collectors.toList()).contains(city))
+                .findFirst().orElse("No worthwhile conferences this year!");
     }
 }
